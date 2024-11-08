@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import Header from './components/Header'
 import PresentationPage from './components/PresentationPage'
-import HomePage from './components/HomePage'
 import homepageBg from './assets/img/favicon.png'
+import HomePageV2 from './components/HomePageV2'
 
 function App() {
   const targetRef = useRef(null)
@@ -33,7 +33,10 @@ function App() {
 
   return (
     <div className="overflow-x-hidden">
-      <HomePage imageSrc={homepageBg} altText="Beautiful pottery and crochet" />
+      <HomePageV2
+        imageSrc={homepageBg}
+        altText="Beautiful pottery and crochet"
+      />
       <div
         ref={targetRef}
         className="flex flex-col items-center bg-white p-2 mt-screen"

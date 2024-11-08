@@ -1,34 +1,34 @@
-import {createBrowserRouter} from 'react-router-dom';
-import App from '../App.jsx';
-import Potery from '../components/Potery.jsx';
-import Contact from '../components/Contact.jsx';
-import Crochet from '../components/Crochet.jsx';
-import Shop from '../components/Shop.jsx';
-import {Navigate} from 'react-router-dom';
-import AboutMe from '../components/AboutMe.jsx';
-import Header from '../components/Header.jsx';
-import {useLocation} from 'react-router-dom';
-import {useEffect} from 'react';
+import { createBrowserRouter } from 'react-router-dom'
+import App from '../App.jsx'
+import Potery from '../components/Pottery.jsx'
+import Contact from '../components/Contact.jsx'
+import Crochet from '../components/Crochet.jsx'
+import Shop from '../components/Shop.jsx'
+import { Navigate } from 'react-router-dom'
+import AboutMe from '../components/AboutMe.jsx'
+import Header from '../components/Header.jsx'
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const ScrollToTop = () => {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    window.scrollTo(0, 0)
+  }, [pathname])
 
-  return null;
-};
+  return null
+}
 
 const renderWithApp = (Component) => (
-  <div className='flex flex-col items-center bg-white xl:p-8  xl:pt-0 p-2'>
+  <div className="flex flex-col items-center bg-white xl:p-8  xl:pt-0 p-2">
     <ScrollToTop />
-    <div className='w-full'>
-      <Header logoClassnames='w-40' />
+    <div className="w-full">
+      <Header logoClassnames="w-32" />
     </div>
     <Component />
   </div>
-);
+)
 
 const router = createBrowserRouter([
   {
@@ -57,13 +57,8 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: (
-      <Navigate
-        to='/delaine/'
-        replace
-      />
-    ),
+    element: <Navigate to="/delaine/" replace />,
   },
-]);
+])
 
-export default router;
+export default router

@@ -6,7 +6,6 @@ const Carousel = ({ category }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
   const [touchStartX, setTouchStartX] = useState(null)
-  const [isTransitioning, setIsTransitioning] = useState(false)
 
   useEffect(() => {
     const preloadImages = () => {
@@ -23,37 +22,20 @@ const Carousel = ({ category }) => {
       }
     }
 
-    const handleScroll = () => {
-      if (isOpen) {
-        setIsOpen(false)
-      }
-    }
-
     window.addEventListener('keydown', handleEscape)
-    window.addEventListener('scroll', handleScroll)
-
     return () => {
       window.removeEventListener('keydown', handleEscape)
-      window.removeEventListener('scroll', handleScroll)
     }
-  }, [items, isOpen])
+  }, [items])
 
   const nextImage = () => {
-    setIsTransitioning(true)
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length)
-      setIsTransitioning(false)
-    }, 300)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length)
   }
 
   const prevImage = () => {
-    setIsTransitioning(true)
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? items.length - 1 : prevIndex - 1,
-      )
-      setIsTransitioning(false)
-    }, 300)
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1,
+    )
   }
 
   const handleImageClick = () => {
@@ -94,7 +76,7 @@ const Carousel = ({ category }) => {
       <img
         src={items[0].image}
         alt={`Main Image`}
-        className="w-full max-w-xl h-80 object-contain cursor-pointer mx-auto rounded-md"
+        className="w-full max-w-xl h-80 object-contain cursor-pointer mx-auto"
         onClick={handleImageClick}
       />
       {isOpen && (

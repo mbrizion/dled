@@ -46,7 +46,7 @@ const resources = {
       firstCuissonTitle: '1st Cuisson',
       emaillageTitle: 'Glazing',
       secondCuissonTitle: '2nd Cuisson',
-      aboutMe: 'About me',
+      aboutMe: 'About',
     },
   },
   fr: {
@@ -95,7 +95,7 @@ const resources = {
       firstCuissonTitle: '1e Cuisson',
       emaillageTitle: 'Emaillage',
       secondCuissonTitle: '2ème Cuisson',
-      aboutMe: 'A propos de moi',
+      aboutMe: 'A propos',
     },
   },
 }

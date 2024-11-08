@@ -1,57 +1,47 @@
-// Flower pot images
 import red_flower from '../assets/img/creations/red_flower/red_flower.jpg'
 import red_flower1 from '../assets/img/creations/red_flower/red_flower1.jpg'
 import white_flower from '../assets/img/creations/white_flower/white_flower.jpg'
 
-// bag
-import bag1 from '../assets/img/creations/bag/bag1.jpg'
-import bag2 from '../assets/img/creations/bag/bag2.jpg'
-import bag3 from '../assets/img/creations/bag/bag3.jpg'
+import senor from '../assets/img/creations/senor/senor.jpg'
+import senor1 from '../assets/img/creations/senor/senor1.jpg'
+import senor2 from '../assets/img/creations/senor/senor2.jpg'
 
-// plant
+import bag from '../assets/img/creations/bag/bag1.jpg'
+import bag1 from '../assets/img/creations/bag/bag2.jpg'
+import bag2 from '../assets/img/creations/bag/bag3.jpg'
+
+import garlic from '../assets/img/creations/garlic/garlic.jpg'
+
+import kirby from '../assets/img/creations/kirby/kirby.jpg'
+
+import pitcher from '../assets/img/creations/pitcher/pitcher1.jpg'
+import pitcher1 from '../assets/img/creations/pitcher/pitcher2.jpg'
+import pitcher2 from '../assets/img/creations/pitcher/pitcher3.jpg'
+import pitcher3 from '../assets/img/creations/pitcher/pitcher4.jpg'
+
 import plant1 from '../assets/img/creations/plant/plant1.jpg'
 import plant2 from '../assets/img/creations/plant/plant2.jpg'
 import plant3 from '../assets/img/creations/plant/plant3.jpg'
 
-// kirby
-import kirby from '../assets/img/creations/kirby/kirby.jpg'
+const crochet = [
+  red_flower,
+  red_flower1,
+  white_flower,
+  senor,
+  senor1,
+  senor2,
+  bag,
+  bag1,
+  bag2,
+  garlic,
+  kirby,
+  pitcher,
+  pitcher1,
+  pitcher2,
+  pitcher3,
+  plant1,
+  plant2,
+  plant3,
+]
 
-// garlic
-import garlic from '../assets/img/creations/garlic/garlic.jpg'
-
-const categories = {
-  red_flower: {
-    title: 'Red flower',
-    items: [
-      { image: red_flower, def: 'Definition for red flower' },
-      { image: red_flower1, def: 'Definition for red flower' },
-      { image: white_flower, def: 'Definition for white flower' },
-    ],
-  },
-  bag: {
-    title: 'bag',
-    items: [
-      { image: bag1, def: 'bag def' },
-      { image: bag2, def: 'bag def' },
-      { image: bag3, def: 'bag def' },
-    ],
-  },
-  plant: {
-    title: 'plant',
-    items: [
-      { image: plant1, def: 'plant def' },
-      { image: plant2, def: 'plant def' },
-      { image: plant3, def: 'plant def' },
-    ],
-  },
-  garlic: {
-    title: 'garlic',
-    items: [{ image: garlic, def: 'garlic def' }],
-  },
-  kirby: {
-    title: 'kirby',
-    items: [{ image: kirby, def: 'kirby def' }],
-  },
-}
-
-export default categories
+export default crochet

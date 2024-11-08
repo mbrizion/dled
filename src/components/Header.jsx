@@ -91,7 +91,7 @@ const Header = ({ classNames, logoClassnames }) => {
             alt="logo"
             className={cn(
               'cursor-pointer',
-              logoClassnames ? logoClassnames : 'md:w-48 w-56',
+              logoClassnames ? logoClassnames : 'md:w-36 w-44',
             )}
             onClick={() => {
               navigate('/')
@@ -105,11 +105,7 @@ const Header = ({ classNames, logoClassnames }) => {
             navigate('/')
             document.getElementById('header').scrollIntoView()
           }}
-        >
-          <span className="whitespace-nowrap text-slate-800">
-            De laine et d'argile
-          </span>
-        </div>
+        ></div>
         <nav className="flex w-full md:justify-end justify-between items-center">
           <div>
             <ul className="flex items-center justify-center space-x-4 md:space-x-8 text-base md:text-lg font-medium text-slate-800 mr-0 md:mr-14">

@@ -1,0 +1,20 @@
+import a from '../assets/img/creations/test_format/1.jpg'
+import b from '../assets/img/creations/test_format/2.jpg'
+import c from '../assets/img/creations/test_format/3.jpg'
+import d from '../assets/img/creations/test_format/4.jpg'
+import e from '../assets/img/creations/test_format/5.jpg'
+import f from '../assets/img/creations/test_format/6.jpg'
+import g from '../assets/img/creations/test_format/7.jpg'
+import h from '../assets/img/creations/test_format/8.jpg'
+import i from '../assets/img/creations/test_format/9.jpg'
+import j from '../assets/img/creations/test_format/a.jpg'
+import k from '../assets/img/creations/test_format/b.jpg'
+import l from '../assets/img/creations/test_format/c.jpg'
+import m from '../assets/img/creations/test_format/d.jpg'
+import n from '../assets/img/creations/test_format/e.jpg'
+import o from '../assets/img/creations/test_format/f.jpg'
+import p from '../assets/img/creations/test_format/g.jpg'
+import q from '../assets/img/creations/test_format/h.jpg'
+
+const test = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q]
+export default test

@@ -1,8 +1,8 @@
-import Header from './Header'
-import Carousel from './Carousel'
-import categories from '../config/crochet.js'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { ScrollCarousel } from './ScrollCarousel.jsx'
+import crochet from '../config/crochet.js'
+import test from '../config/test.js'
 
 const Crochet = () => {
   const { t } = useTranslation()
@@ -13,17 +13,16 @@ const Crochet = () => {
 
   return (
     <div className="flex flex-col bg-white p-10 w-full">
-      <h1 className="text-3xl font-medium mt-20">{t('crochet')}</h1>
+      <h1 className="text-3xl font-medium">{t('crochet')}</h1>
       <div className="text-left mt-6">
         <p className="text-lg">{t('potteryDescription')}</p>
       </div>
-
-      <div className="mt-8 flex flex-col sm:flex-row gap-8 justify-center">
-        {Object.entries(categories).map(([key, { title }]) => (
-          <div key={key} className="mb-8">
-            <Carousel category={categories[key]} />
-          </div>
-        ))}
+      <div className="w-fit h-[600px] object-contain cursor-pointer mx-auto">
+        <ScrollCarousel images={crochet} />
+      </div>
+      <div className="my-10" />
+      <div className="w-fit h-[600px] object-contain cursor-pointer mx-auto">
+        <ScrollCarousel images={test} />
       </div>
     </div>
   )
