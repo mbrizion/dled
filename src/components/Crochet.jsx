@@ -18,10 +18,6 @@ const Crochet = () => {
         <p className="text-lg">{t('potteryDescription')}</p>
       </div>
       <div className="w-fit h-[600px] object-contain cursor-pointer mx-auto">
-        <ScrollCarousel images={crochet} />
-      </div>
-      <div className="my-10" />
-      <div className="w-fit h-[600px] object-contain cursor-pointer mx-auto">
         <ScrollCarousel images={test} />
       </div>
     </div>

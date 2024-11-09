@@ -30,7 +30,7 @@ const Header = ({ classNames, logoClassnames }) => {
     {
       icon: <HiOutlineShoppingCart className="text-3xl" />,
       label: t('shop'),
-      route: '/delaine/shop',
+      route: '/dled/shop',
       classNames: 'hidden 2xl:block',
     },
     {
@@ -40,7 +40,7 @@ const Header = ({ classNames, logoClassnames }) => {
         </div>
       ),
       label: t('pottery'),
-      route: '/delaine/potery/',
+      route: '/dled/pottery/',
     },
     {
       icon: (
@@ -49,17 +49,17 @@ const Header = ({ classNames, logoClassnames }) => {
         </div>
       ),
       label: t('crochet'),
-      route: '/delaine/crochet/',
+      route: '/dled/crochet/',
     },
     {
       icon: <HiOutlineChatBubbleOvalLeftEllipsis className="text-3xl" />,
       label: t('contact'),
-      route: '/delaine/contact/',
+      route: '/dled/contact/',
     },
     {
       icon: <HiOutlineSparkles className="text-3xl 2xl:hidden" />,
       label: t('aboutMe'),
-      route: '/delaine/aboutme/',
+      route: '/dled/aboutme/',
       classNames: 'italic font-medium',
     },
   ]

@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App.jsx'
-import Potery from '../components/Pottery.jsx'
+import Pottery from '../components/Pottery.jsx'
 import Contact from '../components/Contact.jsx'
 import Crochet from '../components/Crochet.jsx'
 import Shop from '../components/Shop.jsx'
@@ -32,32 +32,32 @@ const renderWithApp = (Component) => (
 
 const router = createBrowserRouter([
   {
-    path: '/delaine/',
+    path: '/dled/',
     element: <App />,
   },
   {
-    path: '/delaine/shop',
+    path: '/dled/shop',
     element: renderWithApp(Shop),
   },
   {
-    path: '/delaine/potery/',
-    element: renderWithApp(Potery),
+    path: '/dled/pottery/',
+    element: renderWithApp(Pottery),
   },
   {
-    path: '/delaine/crochet/',
+    path: '/dled/crochet/',
     element: renderWithApp(Crochet),
   },
   {
-    path: '/delaine/contact/',
+    path: '/dled/contact/',
     element: renderWithApp(Contact),
   },
   {
-    path: '/delaine/aboutme',
+    path: '/dled/aboutme',
     element: renderWithApp(AboutMe),
   },
   {
     path: '*',
-    element: <Navigate to="/delaine/" replace />,
+    element: <Navigate to="/dled/" replace />,
   },
 ])
 

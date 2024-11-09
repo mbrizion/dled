@@ -1,12 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 import Header from './components/Header'
-import PresentationPage from './components/PresentationPage'
 import homepageBg from './assets/img/favicon.png'
 import HomePageV2 from './components/HomePageV2'
+import pottery from './assets/img/creations/test_format/8.jpg'
+import crochet from './assets/img/creations/test_format/b.jpg'
+import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
 function App() {
   const targetRef = useRef(null)
   const [hasScrolled, setHasScrolled] = useState(false)
+  const [hoveredIndex, setHoveredIndex] = useState(null)
+  const { t } = useTranslation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -32,18 +38,42 @@ function App() {
   }, [hasScrolled])
 
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <HomePageV2
         imageSrc={homepageBg}
         altText="Beautiful pottery and crochet"
       />
       <div
         ref={targetRef}
-        className="flex flex-col items-center bg-white p-2 mt-screen"
+        className="w-full h-screen flex flex-col items-center bg-white xl:p-8 xl:pt-0 p-2"
       >
-        <div className="w-full">
-          <Header classNames="w-full" />
-          <PresentationPage />
+        <Header classNames="w-full" logoClassnames="w-28" />
+        <div className="flex gap-6 items-center justify-center h-full">
+          {[crochet, pottery].map((img, index) => (
+            <div
+              key={index}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              onClick={() =>
+                navigate(index === 0 ? '/dled/pottery/' : '/dled/crochet/')
+              }
+              className={`w-full max-w-[calc(100vh-12rem)] relative group transition-all duration-200 cursor-pointer ${
+                hoveredIndex === index
+                  ? 'scale-105 opacity-100 z-10'
+                  : hoveredIndex === null
+                    ? 'opacity-100'
+                    : 'opacity-50 transition-opacity'
+              }`}
+            >
+              <img
+                src={img}
+                className="w-full object-cover cursor-pointer ml-2 filter brightness-[0.6] rounded-md"
+              />
+              <p className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">
+                {index === 0 ? t('pottery') : t('crochet')}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
