@@ -11,7 +11,6 @@ import mug from '../assets/img/creations/mug/mug1.jpg'
 import mug1 from '../assets/img/creations/mug/mug3.jpg'
 import pitcher from '../assets/img/creations/pitcher/pitcher2.jpg'
 import { SlideCarousel } from './SlideCarousel'
-import { ScrollCarousel } from './ScrollCarousel'
 
 const flagIcons = { fr, us }
 

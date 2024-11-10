@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ScrollCarousel } from './ScrollCarousel.jsx'
-import crochet from '../config/crochet.js'
 import test from '../config/test.js'
 
 const Crochet = () => {

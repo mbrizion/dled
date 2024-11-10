@@ -1,5 +1,5 @@
 import soon from '../assets/img/coming.png'
-import Header from './Header'
+
 const Shop = () => {
   return (
     <div className="flex flex-col items-center bg-white p-2">
