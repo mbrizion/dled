@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import AutoScroll from 'embla-carousel-auto-scroll'
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi2'
@@ -32,8 +32,8 @@ export const ScrollCarousel = ({ images }) => {
   return (
     <div
       className="relative w-full h-full"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
     >
       <div className="embla w-full h-full pointer-events-none" ref={emblaRef}>
         <div className="embla__container flex">

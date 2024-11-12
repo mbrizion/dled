@@ -4,6 +4,7 @@ import step1 from '../assets/img/clayBg.jpg'
 import step2 from '../assets/img/step2.jpg'
 import step3 from '../assets/img/step3.jpg'
 import step4 from '../assets/img/step4.jpg'
+import step5 from '../assets/img/step5.jpg'
 
 // Pottery steps hook
 const usePotterySteps = () => {
@@ -18,7 +19,7 @@ const usePotterySteps = () => {
 
   const steps = [
     getStep('clay', 'clayTitle', 'clayDescription', step1),
-    getStep('tournage', 'tournageTitle', 'tournageDescription', step2),
+    getStep('tournage', 'tournageTitle', 'tournageDescription', step5),
     getStep('tournassage', 'tournassageTitle', 'tournassageDescription', step2),
     getStep(
       'firstCuisson',
