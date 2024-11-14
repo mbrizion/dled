@@ -37,13 +37,36 @@
 .embla {
   overflow: hidden;
 }
+
 .embla__container {
   display: flex;
 }
+
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.embla-thumbs {
+  display: flex;
+  justify-content: center;
+}
+
+.embla__slide img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  .embla-thumbs {
+    /* display: none; */
+  }
+}
+
 @keyframes pulse-left {
   0%,
   100% {

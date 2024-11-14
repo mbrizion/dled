@@ -7,20 +7,15 @@ const resources = {
   en: {
     translation: {
       pottery: 'Ceramics',
+      potteryTitle: 'Ceramics pieces',
       crochet: 'Crochet',
+      crochetTitle: 'Crochet pieces',
       contact: 'Contact',
       welcome: 'Handmade ceramics & crochet made in Normandy',
       subtitle: '',
       siteTitle: "De laine et d'argile",
       potteryPageTitle: "Delaine & D'argile - Ceramics",
-      potteryDescription: 'Bring a special touch to your home.',
-      potteryDescriptionP2:
-        "I'm creating wheel thrown ceramics in my home studio (aka my parents' garage). Never making the same piece twice, each piece is entirely unique and one of a kind. Each collection is created in small batches throughout different periods of my life, ebbing and flowing along with me. My intention is to create pieces that can be cherished in your home.",
       categoryTitle: '{{title}}',
-      ourStory: '',
-      ourStoryDescription: '',
-      ourMission: '',
-      ourMissionDescription: '',
       contactMe: 'Contact me',
       inquiries: 'For all inquiries feel free to reach out at :',
       checkInstagram: 'My instagram',
@@ -43,32 +38,26 @@ const resources = {
       clayTitle: 'Clay',
       tournageTitle: 'Throwing',
       tournassageTitle: 'Trimming',
-      firstCuissonTitle: '1st Cuisson',
+      firstCuissonTitle: '1st firing',
       emaillageTitle: 'Glazing',
-      secondCuissonTitle: '2nd Cuisson',
+      secondCuissonTitle: '2nd firing',
       aboutMe: 'About',
+      aboutMeTitle: "Behind de laine et d'argile",
+      aboutMeDescription:
+        "Welcome to my world ! My name is Marie and I'm from France. I was first introduced to ceramics when I studied abroad in the US and fell in love with it. Crochet came a little bit later but makes my heart as warm and fuzzy as pottery does. Never creating the same piece twice, each creation is unique and handmade with care. Each collection is produced in small series at different periods of my life, evolving with my journey. I hope that my creations will bring a touch of authenticity and warmth to your daily life.",
     },
   },
   fr: {
     translation: {
       pottery: 'Poterie',
+      potteryTitle: 'Créations céramique',
       crochet: 'Crochet',
+      crochetTitle: 'Créations en crochet',
       contact: 'Contact',
       welcome: 'Céramique artisanale & crochet made in Normandie',
-      subtitle:
-        'Découvrez notre passion pour l’artisanat à travers des créations uniques faites main. Que vous soyez amateur de poterie ou adepte du crochet, nous vous invitons à explorer nos collections de pièces artistiques et utilitaires, conçues avec soin et amour du détail.',
       siteTitle: "De laine et d'argile",
       potteryPageTitle: "Delaine & D'argile - Poterie",
-      potteryDescription: 'Apportez une touche spéciale à votre intérieur.',
-      potteryDescriptionP2:
-        'Je crée des céramiques tournées à la main dans mon atelier à domicile. Ne créant jamais deux fois la même pièce, chaque création est entièrement unique. Chaque collection est produite en petites séries à différentes périodes de ma vie, évoluant au rythme de mon parcours. Mon intention est de créer des pièces qui pourront être chéries dans votre foyer.',
       categoryTitle: '{{title}}',
-      ourStory: 'Notre histoire',
-      ourStoryDescription:
-        'Nous sommes une petite équipe d’artisans passionnés qui partagent une même vision : valoriser les techniques artisanales anciennes en les modernisant à travers des designs contemporains. Depuis plusieurs années, nous créons des objets de poterie et des pièces en crochet qui racontent une histoire, celle d’un savoir-faire minutieux et d’une créativité sans limite.',
-      ourMission: 'Notre mission',
-      ourMissionDescription:
-        "Faire entrer l’art dans votre quotidien. Nous croyons en l’importance des objets faits main, en leur capacité à embellir la vie et à raconter des histoires. Chaque pièce est unique, façonnée avec attention pour apporter une touche d'authenticité à votre intérieur.",
       contactMe: 'Contactez-moi',
       inquiries:
         "Pour toute question ou projet, n'hésitez pas à me contacter par mail :",
@@ -96,6 +85,9 @@ const resources = {
       emaillageTitle: 'Emaillage',
       secondCuissonTitle: '2ème Cuisson',
       aboutMe: 'A propos',
+      aboutMeTitle: "Derrière de laine et d'argile",
+      aboutMeDescription:
+        "Bienvenue dans mon univers ! Je suis passionnée par la poterie et le crochet, deux arts qui me permettent d'exprimer ma créativité. J'ai découvert la poterie en 2022 lors de mes études aux Etats-Unis, et ce fut un véritable coup de coeur. La découverte du crochet est venue un peu après, mais je m'amuse tout autant, dans un registre différent. Ne créant jamais deux fois la même pièce, chaque création est entièrement unique et fabriquée à la main avec soin. Chaque collection est produite en petites séries à différentes périodes de ma vie, évoluant au rythme de mon parcours. J'espère que mes créations apporteront une touche d'authenticité et de chaleur à votre quotidien.",
     },
   },
 }

@@ -10,7 +10,7 @@ const AboutMe = () => {
         <h1 className="text-3xl font-semibold my-10">{t('aboutMe')}</h1>
         <div className="border w-full flex relative">
           <p className="text-4xl absolute left-1/2 transform -translate-x-1/2 -top-1 -translate-y-1/2">
-            De laine et d'argile
+            {t('aboutMeTitle')}
           </p>
           <div className="w-full">dsa</div>
           <div className="w-full">

@@ -6,6 +6,9 @@ export default {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      screens: {
+        xl2: '1400px',
+      },
       colors: colors,
       animation: {
         pulseSlow: 'pulseSlow 3s ease-in-out infinite',
