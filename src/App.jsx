@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import Header from './components/Header'
 import homepageBg from './assets/img/favicon.png'
-import HomePageV2 from './components/HomePageV2'
-import pottery from './assets/img/creations/test_format/8.jpg'
-import crochet from './assets/img/creations/test_format/b.jpg'
+import HomePage from './components/HomePage'
+import pottery from './assets/img/creations/bag/bag3.jpg'
+import crochet from './assets/img/creations/bowl/bowl2.jpg'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
@@ -39,16 +39,13 @@ function App() {
 
   return (
     <div>
-      <HomePageV2
-        imageSrc={homepageBg}
-        altText="Beautiful pottery and crochet"
-      />
+      <HomePage imageSrc={homepageBg} altText="Beautiful pottery and crochet" />
       <div
         ref={targetRef}
         className="w-full h-screen flex flex-col items-center bg-white xl:p-8 xl:pt-0 p-2"
       >
         <Header classNames="w-full" logoClassnames="w-28" />
-        <div className="flex gap-6 items-center justify-center h-full">
+        <div className="flex gap-6 items-center justify-center h-full flex-col md:flex-row">
           {[crochet, pottery].map((img, index) => (
             <div
               key={index}

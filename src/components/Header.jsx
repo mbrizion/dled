@@ -12,13 +12,15 @@ import {
   HiOutlineChatBubbleOvalLeftEllipsis,
   HiOutlineShoppingCart,
 } from 'react-icons/hi2'
-import crochet from '../assets/img/crochet.svg'
+import crochet2 from '../assets/img/crochet2.svg'
+
 import pottery from '../assets/img/pottery.svg'
+
 import { HiOutlineSparkles } from 'react-icons/hi'
+import { isMobile } from 'react-device-detect'
 
 const flagIcons = { fr, us }
-
-const Header = ({ classNames, logoClassnames }) => {
+const Header = ({ classNames, logoClassnames, isTransparent }) => {
   const [isHovered, setIsHovered] = useState(false)
   const { t, i18n } = useTranslation()
   const [language, setLanguage] = useState(i18n.language || 'fr')
@@ -28,14 +30,14 @@ const Header = ({ classNames, logoClassnames }) => {
 
   const menuItems = [
     {
-      icon: <HiOutlineShoppingCart className="text-3xl" />,
+      icon: <HiOutlineShoppingCart className="text-3xl text-black" />,
       label: t('shop'),
       route: '/dled/shop',
       classNames: 'hidden 2xl:block',
     },
     {
       icon: (
-        <div className="h-8 w-8 min-h-8 min-w-8">
+        <div className="h-7 w-7 min-h-8 min-w-8">
           <img src={pottery} />
         </div>
       ),
@@ -45,19 +47,21 @@ const Header = ({ classNames, logoClassnames }) => {
     {
       icon: (
         <div className="h-8 w-8 min-h-8 min-w-8">
-          <img src={crochet} />
+          <img className="h-7 w-7" src={crochet2} />
         </div>
       ),
       label: t('crochet'),
       route: '/dled/crochet/',
     },
     {
-      icon: <HiOutlineChatBubbleOvalLeftEllipsis className="text-3xl" />,
+      icon: (
+        <HiOutlineChatBubbleOvalLeftEllipsis className="text-3xl text-black" />
+      ),
       label: t('contact'),
       route: '/dled/contact/',
     },
     {
-      icon: <HiOutlineSparkles className="text-3xl 2xl:hidden" />,
+      icon: <HiOutlineSparkles className="text-3xl 2xl:hidden text-black" />,
       label: t('aboutMe'),
       route: '/dled/aboutme/',
       classNames: 'italic font-medium',
@@ -83,7 +87,14 @@ const Header = ({ classNames, logoClassnames }) => {
   }, [dropdownRef])
 
   return (
-    <header className={cn('bg-white shadow-sm w-full', classNames)} id="header">
+    <header
+      className={cn(
+        'w-full transition-colors duration-300',
+        isTransparent ? 'bg-transparent' : 'bg-white',
+        classNames,
+      )}
+      id="header"
+    >
       <div className="mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-0 sm:px-6 md:px-12">
         <div className="flex items-center mb-4 md:mb-0 min-w-48">
           <img
@@ -107,13 +118,13 @@ const Header = ({ classNames, logoClassnames }) => {
           }}
         ></div>
         <nav className="flex w-full md:justify-end justify-between items-center">
-          <div>
+          <div className={cn(isTransparent && 'invert')}>
             <ul className="flex items-center justify-center space-x-4 md:space-x-8 text-base md:text-lg font-medium text-slate-800 mr-0 md:mr-14">
               {menuItems.map((item, index) => (
                 <li
                   key={index}
                   className={cn(
-                    'relative cursor-pointer flex flex-col items-center',
+                    'relative cursor-pointer flex flex-col items-center text-black',
                   )}
                   onClick={() => navigate(item.route)}
                 >
@@ -134,32 +145,55 @@ const Header = ({ classNames, logoClassnames }) => {
             </ul>
           </div>
           <div className="flex gap-2">
-            <div className="relative flex items-center justify-center">
+            <div className={cn('relative flex items-center justify-center')}>
               <div
                 className="relative w-8 h-8"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
-                <a href={instaLink} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={instadark}
-                    alt="Instagram dark logo"
-                    className={cn(
-                      'absolute transition-opacity duration-300 ease-in-out',
-                      isHovered ? 'opacity-0' : 'opacity-100',
-                    )}
-                  />
-                </a>
-                <a href={instaLink} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={insta}
-                    alt="Instagram colorful logo"
-                    className={cn(
-                      'absolute transition-opacity duration-300 ease-in-out',
-                      isHovered ? 'opacity-100' : 'opacity-0',
-                    )}
-                  />
-                </a>
+                {!isMobile ? (
+                  <>
+                    <a
+                      href={instaLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={instadark}
+                        alt="Instagram dark logo"
+                        className={cn(
+                          'absolute transition-opacity duration-300 ease-in-out',
+                          isHovered ? 'opacity-0' : 'opacity-100',
+                          isTransparent ? 'invert' : '',
+                        )}
+                      />
+                    </a>
+                    <a
+                      href={instaLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={insta}
+                        alt="Instagram colorful logo"
+                        className={cn(
+                          'absolute transition-opacity duration-300 ease-in-out',
+                          isHovered ? 'opacity-100' : 'opacity-0',
+                        )}
+                      />
+                    </a>
+                  </>
+                ) : (
+                  <a href={instaLink} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={insta}
+                      alt="Instagram colorful logo"
+                      className={cn(
+                        'absolute transition-opacity duration-300 ease-in-out',
+                      )}
+                    />
+                  </a>
+                )}
               </div>
             </div>
             <div className="relative" ref={dropdownRef}>
@@ -174,7 +208,11 @@ const Header = ({ classNames, logoClassnames }) => {
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-4 w-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                  className={cn(
+                    'h-4 w-4 transition-transform duration-300',
+                    isDropdownOpen ? 'rotate-180' : '',
+                    isTransparent && 'invert',
+                  )}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

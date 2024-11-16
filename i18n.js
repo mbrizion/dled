@@ -7,7 +7,7 @@ const resources = {
   en: {
     translation: {
       pottery: 'Ceramics',
-      potteryTitle: 'Ceramics pieces',
+      potteryTitle: 'Ceramic pieces',
       crochet: 'Crochet',
       crochetTitle: 'Crochet pieces',
       contact: 'Contact',

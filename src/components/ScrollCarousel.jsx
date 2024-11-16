@@ -85,7 +85,7 @@ export const ScrollCarouselWithThumbnails = ({ images }) => {
                 key={index}
               >
                 <img
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto max-h-fit object-cover"
                   src={image}
                   alt={`Slide ${index + 1}`}
                 />

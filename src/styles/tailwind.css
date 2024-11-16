@@ -61,12 +61,6 @@
   flex: 0 0 auto;
 }
 
-@media (max-width: 768px) {
-  .embla-thumbs {
-    /* display: none; */
-  }
-}
-
 @keyframes pulse-left {
   0%,
   100% {

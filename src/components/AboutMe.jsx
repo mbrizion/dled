@@ -7,13 +7,14 @@ const AboutMe = () => {
   return (
     <div className="flex flex-col items-center bg-white p-2 w-full">
       <div className="flex flex-col items-center p-6 w-full">
-        <h1 className="text-3xl font-semibold my-10">{t('aboutMe')}</h1>
         <div className="border w-full flex relative">
-          <p className="text-4xl absolute left-1/2 transform -translate-x-1/2 -top-1 -translate-y-1/2">
+          <p className="absolute left-1/2 transform -translate-x-1/2 -top-1 -translate-y-8 text-5xl font-medium text-[#548cb8] font-aboreto uppercase">
             {t('aboutMeTitle')}
           </p>
-          <div className="w-full">dsa</div>
           <div className="w-full">
+            <p className="text-xl bg-red-50">{t('aboutMeDescription')}</p>
+          </div>
+          <div className="w-full border-l">
             <VaraText />
           </div>
         </div>
