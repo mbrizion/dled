@@ -96,7 +96,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
       id="header"
     >
       <div className="mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-0 sm:px-6 md:px-12">
-        <div className="flex items-center mb-4 md:mb-0 min-w-48">
+        <div className="flex items-center justify-center mb-4 md:mb-0 min-w-48">
           <img
             src={logo}
             alt="logo"

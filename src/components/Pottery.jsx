@@ -12,7 +12,6 @@ const Pottery = () => {
   const steps = usePotterySteps()
 
   useEffect(() => {
-    // Scroll to the processRef element when the component mounts
     if (scollInView.current) {
       scollInView.current.scrollIntoView({ behavior: 'smooth' })
     }
@@ -21,10 +20,10 @@ const Pottery = () => {
   return (
     <div className="flex flex-col items-center justify-center p-10 w-full">
       <div
-        className="flex items-center justify-center text-4xl absolute left-1/2 transform -translate-x-1/2 -top-1 translate-y-[10rem] z-30 uppercase flex-col w-full"
+        className="flex items-center justify-center text-4xl uppercase flex-col w-full relative"
         ref={scollInView}
       >
-        <h2 className="text-6xl font-medium text-[#548cb8] font-aboreto w-full text-center">
+        <h2 className="text-lg md:text-6xl font-medium text-[#548cb8] font-aboreto w-full text-center relative -mb-1 md:-mb-4 z-10">
           {t('potteryTitle')}
         </h2>
       </div>

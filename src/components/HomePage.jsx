@@ -19,9 +19,8 @@ const HomePageV2 = () => {
       <Header
         isTransparent
         classNames="w-full z-50 absolute"
-        logoClassnames="w-48"
+        logoClassnames="md:w-48 w-36"
       />
-
       <SlideCarousel images={images} />
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 

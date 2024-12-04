@@ -54,6 +54,7 @@
 
 .embla__slide img {
   object-fit: cover;
+  -moz-object-fit: cover;
   border-radius: 4px;
 }
 

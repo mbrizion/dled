@@ -5,28 +5,25 @@ import crochet from '../config/crochet.js'
 
 const Crochet = () => {
   const { t } = useTranslation()
-  const firstDivRef = useRef(null) // Create a ref for the first div
+  const scrollInView = useRef(null)
 
   useEffect(() => {
-    document.title = t('potteryPageTitle')
-
-    // Scroll the first div into view
-    if (firstDivRef.current) {
-      firstDivRef.current.scrollIntoView({ behavior: 'smooth' })
+    if (scrollInView.current) {
+      scrollInView.current.scrollIntoView({ behavior: 'smooth' })
     }
   }, [t])
 
   return (
-    <div
-      ref={firstDivRef}
-      className="flex flex-col bg-white p-2 md:p-10 w-full"
-    >
-      <div className="flex items-center justify-center text-4xl absolute left-1/2 transform -translate-x-1/2 -top-1 translate-y-[10rem] z-30 uppercase flex-col w-full">
-        <h2 className="text-6xl font-medium text-[#548cb8] font-aboreto w-full text-center">
+    <div className="flex flex-col items-center justify-center p-10 w-full">
+      <div
+        className="flex items-center justify-center text-4xl uppercase flex-col w-full"
+        ref={scrollInView}
+      >
+        <h2 className="text-lg md:text-6xl font-medium text-[#548cb8] font-aboreto w-full text-center relative -mb-1 md:-mb-4 z-10">
           {t('crochetTitle')}
         </h2>
       </div>
-      <div className="w-fit h-[600px] object-contain cursor-pointer mx-auto">
+      <div className="w-fit object-contain cursor-pointer mx-auto">
         <ScrollCarouselWithThumbnails images={crochet} />
       </div>
     </div>

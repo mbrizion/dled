@@ -45,7 +45,7 @@ function App() {
         className="w-full h-screen flex flex-col items-center bg-white xl:p-8 xl:pt-0 p-2"
       >
         <Header classNames="w-full" logoClassnames="w-28" />
-        <div className="flex gap-6 items-center justify-center h-full flex-col md:flex-row">
+        <div className="flex md:gap-6 gap-2 items-center justify-center h-full flex-col md:flex-row">
           {[crochet, pottery].map((img, index) => (
             <div
               key={index}
@@ -54,7 +54,7 @@ function App() {
               onClick={() =>
                 navigate(index === 0 ? '/dled/pottery/' : '/dled/crochet/')
               }
-              className={`w-full max-w-[calc(100vh-12rem)] relative group transition-all duration-200 cursor-pointer ${
+              className={`w-full max-w-80 md:max-w-[calc(100vh-12rem)] relative group transition-all duration-200 cursor-pointer md:mb-0 mb-2 ${
                 hoveredIndex === index
                   ? 'scale-105 opacity-100 z-10'
                   : hoveredIndex === null
@@ -64,7 +64,7 @@ function App() {
             >
               <img
                 src={img}
-                className="w-full object-cover cursor-pointer ml-2 filter brightness-[0.6] rounded-md"
+                className="w-full object-cover cursor-pointer md:ml-2 filter brightness-[0.6] rounded-md"
               />
               <p className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold">
                 {index === 0 ? t('pottery') : t('crochet')}
