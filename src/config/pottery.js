@@ -8,4 +8,44 @@ import bowl7 from '../assets/img/creations/bowl/bowl7.jpg'
 import mug1 from '../assets/img/creations/mug/mug1.jpg'
 import mug3 from '../assets/img/creations/mug/mug3.jpg'
 
-export const pottery = [bowl2, bowl6, mug3, bowl7, mug1, bowl5]
+// Leaf bowl
+import leaf_bowl from '../assets/img/creations/leaf_bowl/leaf_bowl.jpg'
+import leaf_bowl1 from '../assets/img/creations/leaf_bowl/leaf_bowl1.jpg'
+
+// Cup
+import cup from '../assets/img/creations/cup/cup.jpg'
+import cup1 from '../assets/img/creations/cup/cup1.jpg'
+
+// Blue bowl
+import blue_bowl from '../assets/img/creations/blue_bowl/blue_bowl.jpg'
+import blue_bowl1 from '../assets/img/creations/blue_bowl/blue_bowl1.jpg'
+
+// Black bowl
+import black_bowl from '../assets/img/creations/black_bowl/black_bowl.jpg'
+import black_bowl1 from '../assets/img/creations/black_bowl/black_bowl1.jpg'
+
+// Black cup
+import black_cup from '../assets/img/creations/black_cup/black_cup.jpg'
+import black_cup1 from '../assets/img/creations/black_cup/black_cup1.jpg'
+
+export const pottery = [
+  bowl2,
+  bowl6,
+  leaf_bowl1,
+  mug3,
+  bowl7,
+  mug1,
+  bowl5,
+  leaf_bowl,
+  blue_bowl,
+  blue_bowl1,
+  black_bowl,
+  black_bowl1,
+  black_cup,
+  black_cup1,
+  cup,
+  cup1,
+]
+
+// Randomize the array
+export const randomizedPottery = pottery.sort(() => Math.random() - 0.5)

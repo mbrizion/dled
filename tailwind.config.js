@@ -1,4 +1,3 @@
-// tailwind.config.js
 import colors from './src/styles/colors'
 
 /** @type {import('tailwindcss').Config} */
@@ -27,6 +26,7 @@ export default {
       fontFamily: {
         rosarivo: ['Rosarivo'],
         aboreto: ['Aboreto'],
+        league: ['"League Script"', 'cursive'],
       },
     },
   },

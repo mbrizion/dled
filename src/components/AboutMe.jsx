@@ -8,7 +8,7 @@ const AboutMe = () => {
     <div className="flex flex-col items-center p-6 w-full">
       <div className="max-w-4xl w-full overflow-hidden">
         <div className="relative py-8 text-center">
-          <h1 className="text-lg md:text-6xl font-medium text-[#548cb8] font-aboreto w-full text-center relative -mb-1 md:-mb-4 z-10">
+          <h1 className="text-lg md:text-4xl font-medium text-[#548cb8] font-aboreto w-full text-center relative -mb-1 md:-mb-4 z-10 uppercase">
             {t('aboutMeTitle')}
           </h1>
         </div>
@@ -25,11 +25,37 @@ const AboutMe = () => {
             <img
               src={logo}
               alt="Logo"
-              className="mt-6 w-56 h-56 object-contain absolute left-0 top-10"
+              className="mt-6 w-56 h-56 object-contain"
             />
+            {/* Growing Effect */}
+            <div className="relative mt-20 text-xl font-bold text-gray-700 overflow-hidden">
+              <div className="grow-effect font-league text-6xl">Hello</div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Growing effect styles */}
+      <style jsx>{`
+        .grow-effect {
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          animation: grow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes grow {
+          0% {
+            width: 0;
+          }
+          80% {
+            width: 100%; /* Full word visible */
+          }
+          100% {
+            width: 0; /* Reset to hidden */
+          }
+        }
+      `}</style>
     </div>
   )
 }

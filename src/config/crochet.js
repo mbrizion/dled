@@ -14,6 +14,7 @@ import plant1 from '../assets/img/creations/plant/plant1.jpg'
 import plant2 from '../assets/img/creations/plant/plant2.jpg'
 import plant3 from '../assets/img/creations/plant/plant3.jpg'
 
+// Add all imports to the array
 const crochet = [
   garlic,
   red_flower,
@@ -27,4 +28,7 @@ const crochet = [
   plant3,
 ]
 
-export default crochet
+// Randomize the array
+const randomizedCrochet = crochet.sort(() => Math.random() - 0.5)
+
+export default randomizedCrochet

@@ -119,7 +119,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
         ></div>
         <nav className="flex w-full md:justify-end justify-between items-center">
           <div className={cn(isTransparent && 'invert')}>
-            <ul className="flex items-center justify-center space-x-4 md:space-x-8 text-base md:text-lg font-medium text-slate-800 mr-0 md:mr-14">
+            <ul className="flex items-center justify-center space-x-4 md:space-x-8 text-base md:text-lg font-medium text-slate-800 mr-0 md:mr-14 pl-2">
               {menuItems.map((item, index) => (
                 <li
                   key={index}
@@ -128,7 +128,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
                   )}
                   onClick={() => navigate(item.route)}
                 >
-                  <div className={cn('flex gap-2')}>
+                  <div className="flex gap-2">
                     {item.icon}
                     {item.icon ? (
                       <span className="hidden 2xl:block">{item.label}</span>

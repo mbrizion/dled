@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ScrollCarouselWithThumbnails } from './ScrollCarousel.jsx'
-import crochet from '../config/crochet.js'
+import randomizedCrochet from '../config/crochet.js'
 
 const Crochet = () => {
   const { t } = useTranslation()
@@ -14,7 +14,7 @@ const Crochet = () => {
   }, [t])
 
   return (
-    <div className="flex flex-col items-center justify-center p-10 w-full">
+    <div className="flex flex-col items-center justify-center lg:p-10 w-full">
       <div
         className="flex items-center justify-center text-4xl uppercase flex-col w-full"
         ref={scrollInView}
@@ -24,7 +24,7 @@ const Crochet = () => {
         </h2>
       </div>
       <div className="w-fit object-contain cursor-pointer mx-auto">
-        <ScrollCarouselWithThumbnails images={crochet} />
+        <ScrollCarouselWithThumbnails images={randomizedCrochet} />
       </div>
     </div>
   )
