@@ -1,11 +1,49 @@
 import { useTranslation } from 'react-i18next'
 import logo from '../assets/img/logo.png'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import qr from '../assets/img/dled_qr.png'
 
 const AboutMe = () => {
   const { t } = useTranslation()
+  const [keySequence, setKeySequence] = useState('')
+  const [isMatch, setIsMatch] = useState(false)
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      const key = event.key
+
+      setKeySequence((prevSequence) => {
+        const newSequence = prevSequence + key
+        if (newSequence === '42') {
+          setIsMatch(true)
+        } else {
+          setIsMatch(false)
+        }
+        if (newSequence.length >= 2) {
+          return ''
+        }
+        return newSequence
+      })
+    }
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
+  console.log(keySequence)
 
   return (
     <div className="flex flex-col items-center p-6 w-full">
+      {isMatch && (
+        <div
+          className="bg-black bg-opacity-85 absolute w-screen h-screen top-0 z-50 flex items-center justify-center"
+          onClick={() => setIsMatch(false)}
+        >
+          <img src={qr} alt="qr" className="mt-6 w-2/3 h-2/3 object-contain" />
+        </div>
+      )}
       <div className="max-w-4xl w-full overflow-hidden">
         <div className="relative py-8 text-center">
           <h1 className="text-lg md:text-4xl font-medium text-[#548cb8] font-aboreto w-full text-center relative -mb-1 md:-mb-4 z-10 uppercase">
@@ -27,35 +65,9 @@ const AboutMe = () => {
               alt="Logo"
               className="mt-6 w-56 h-56 object-contain"
             />
-            {/* Growing Effect */}
-            <div className="relative mt-20 text-xl font-bold text-gray-700 overflow-hidden">
-              <div className="grow-effect font-league text-6xl">Hello</div>
-            </div>
           </div>
         </div>
       </div>
-
-      {/* Growing effect styles */}
-      <style jsx>{`
-        .grow-effect {
-          display: inline-block;
-          white-space: nowrap;
-          overflow: hidden;
-          animation: grow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        }
-
-        @keyframes grow {
-          0% {
-            width: 0;
-          }
-          80% {
-            width: 100%; /* Full word visible */
-          }
-          100% {
-            width: 0; /* Reset to hidden */
-          }
-        }
-      `}</style>
     </div>
   )
 }
