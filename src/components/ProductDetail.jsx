@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useParams } from 'react-router-dom'
-import { products } from '../config/products'
+import { productsByType } from '../config/products'
 
 const ProductDetail = () => {
   const { id } = useParams()
-  const product = products.find((item) => item.id === parseInt(id))
+  const [product, setProduct] = useState(null)
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: 'y' })
   const [selectedIndex, setSelectedIndex] = useState(0)
+
+  // Find the product by ID across all categories
+  useEffect(() => {
+    let foundProduct = null
+    Object.values(productsByType).forEach((category) => {
+      const match = category.find((item) => item.id === parseInt(id))
+      if (match) foundProduct = match
+    })
+    setProduct(foundProduct)
+  }, [id])
 
   // Handle thumbnail click
   const handleThumbnailClick = (index) => {

@@ -32,7 +32,6 @@ const AboutMe = () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [])
-  console.log(keySequence)
 
   return (
     <div className="flex flex-col items-center p-6 w-full">
