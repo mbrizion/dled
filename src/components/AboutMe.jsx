@@ -49,7 +49,7 @@ const AboutMe = () => {
             {t('aboutMeTitle')}
           </h1>
         </div>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col-reverse md:flex-row">
           {/* Left Section */}
           <div className="flex-1 p-6 space-y-4">
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -58,7 +58,7 @@ const AboutMe = () => {
           </div>
 
           {/* Right Section */}
-          <div className="flex-1 border-t md:border-t-0 md:border-l p-6 flex flex-col items-center relative">
+          <div className="flex-1 border-b md:border-b-0 md:border-l p-6 flex flex-col items-center relative">
             <img
               src={rima}
               alt="rima"
