@@ -89,3 +89,13 @@
 .pulse-right {
   animation: pulse-right 1.5s infinite;
 }
+
+@keyframes pulse-reverse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

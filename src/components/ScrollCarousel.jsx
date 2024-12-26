@@ -109,7 +109,7 @@ export const ScrollCarouselWithThumbnails = ({ images }) => {
               key={index}
               className={`embla__slide w-20 h-20 border-2 ${
                 selectedIndex === index
-                  ? 'border-blue-500 rounded-md'
+                  ? 'border-[#548cb8] rounded-md'
                   : 'border-transparent'
               }`}
               onClick={() => onThumbnailClick(index)}

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import logo from '../assets/img/logo.png'
+import rima from '../assets/img/Rima.jpg'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import qr from '../assets/img/dled_qr.png'
@@ -60,9 +60,9 @@ const AboutMe = () => {
           {/* Right Section */}
           <div className="flex-1 border-t md:border-t-0 md:border-l p-6 flex flex-col items-center relative">
             <img
-              src={logo}
-              alt="Logo"
-              className="mt-6 w-56 h-56 object-contain"
+              src={rima}
+              alt="rima"
+              className="w-fit h-full  object-contain"
             />
           </div>
         </div>

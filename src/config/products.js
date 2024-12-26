@@ -28,6 +28,8 @@ import black_bowl1 from '../assets/img/creations/black_bowl/black_bowl1.jpg'
 import black_cup from '../assets/img/creations/black_cup/black_cup.jpg'
 import black_cup1 from '../assets/img/creations/black_cup/black_cup1.jpg'
 
+const soldOutColor = 'text-white'
+
 export const productsByType = {
   bowls: [
     {
@@ -63,6 +65,7 @@ export const productsByType = {
       description: 'Nature-inspired leaf bowl, ideal for serving or display.',
       price: '€18,00',
       link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      status: { label: 'Sold Out', color: soldOutColor },
     },
   ],
   mugs: [

@@ -34,18 +34,26 @@ const Shop = () => {
         {productsByType[selectedCategory].map((product) => (
           <div
             key={product.id}
-            onClick={() => navigate(`/dled/shop/${product.id}`)}
+            onClick={() =>
+              product.status?.label !== 'Sold Out' &&
+              navigate(`/dled/shop/${product.id}`)
+            }
             onMouseEnter={() => setHoveredProduct(product.id)}
             onMouseLeave={() => setHoveredProduct(null)}
             className="cursor-pointer relative flex flex-col items-center"
           >
+            {product.status?.label === 'Sold Out' && (
+              <span className="absolute top-2 right-2 flex items-center justify-center z-20 uppercase text-white font-bold transform tracking-widest p-2 bg-black bg-opacity-45 rounded-md">
+                Sold Out
+              </span>
+            )}
             {/* Default Image */}
             <img
               src={product.images[0]}
               alt={product.name}
               className={`w-full h-96 object-cover rounded shadow-lg transition-opacity duration-300 ease-in-out ${
                 hoveredProduct === product.id ? 'opacity-0' : 'opacity-100'
-              } absolute`}
+              } ${product.status?.label === 'Sold Out' ? 'opacity-50' : ''} absolute`}
             />
             {/* Hover Image */}
             <img
@@ -53,7 +61,7 @@ const Shop = () => {
               alt={product.name}
               className={`w-full h-96 object-cover rounded shadow-lg transition-opacity duration-300 ease-in-out ${
                 hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'
-              }`}
+              } : ''} ${product.status?.label === 'Sold Out' ? '' : ''} `}
             />
             <h2 className="text-xl mt-2 font-semibold">{product.name}</h2>
             <p className="text-gray-700">{product.price}</p>

@@ -12,6 +12,8 @@ export default {
       animation: {
         pulseSlow: 'pulseSlow 3s ease-in-out infinite',
         fadeIn: 'fadeIn 1s ease-in-out',
+        pulseReverse:
+          'pulse-reverse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         pulseSlow: {

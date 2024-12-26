@@ -46,7 +46,9 @@ const ProductDetail = () => {
                 <div
                   key={index}
                   className={`cursor-pointer ${
-                    selectedIndex === index ? 'border border-gray-900' : ''
+                    selectedIndex === index
+                      ? 'border-2 border-[#548cb8] rounded-md'
+                      : ''
                   }`}
                   onClick={() => handleThumbnailClick(index)}
                 >

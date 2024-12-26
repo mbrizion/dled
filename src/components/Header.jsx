@@ -30,7 +30,12 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
 
   const menuItems = [
     {
-      icon: <HiOutlineShoppingCart className="text-3xl text-black" />,
+      icon: (
+        <HiOutlineShoppingCart
+          className="text-3xl text-black"
+          style={{ strokeWidth: 1 }}
+        />
+      ),
       label: t('shop'),
       route: '/dled/shop',
       classNames: 'hidden 2xl:block',
@@ -55,13 +60,21 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
     },
     {
       icon: (
-        <HiOutlineChatBubbleOvalLeftEllipsis className="text-3xl text-black" />
+        <HiOutlineChatBubbleOvalLeftEllipsis
+          className="text-3xl text-black"
+          style={{ strokeWidth: 1 }}
+        />
       ),
       label: t('contact'),
       route: '/dled/contact/',
     },
     {
-      icon: <HiOutlineSparkles className="text-3xl 2xl:hidden text-black" />,
+      icon: (
+        <HiOutlineSparkles
+          className="text-3xl 2xl:hidden text-black font-light"
+          style={{ strokeWidth: 1 }}
+        />
+      ),
       label: t('aboutMe'),
       route: '/dled/aboutme/',
       classNames: 'italic font-medium',
