@@ -31,8 +31,8 @@ const Pottery = () => {
         <ScrollCarouselWithThumbnails images={randomizedPottery} />
       </div>
       <h1 className="mt-6 text-3xl font-medium w-full">{t('process')}</h1>
-      <div className="flex flex-col flex-wrap gap-6 mt-10 w-full items-center">
-        <div className="flex flex-col items-center mt-10 w-full">
+      <div className="flex flex-col flex-wrap gap-6 w-full items-center">
+        <div className="flex flex-col items-center mt-6 w-full">
           <Steps steps={steps} />
         </div>
       </div>
