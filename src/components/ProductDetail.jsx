@@ -7,7 +7,7 @@ const ProductDetail = () => {
   const { id } = useParams()
   const [product, setProduct] = useState(null)
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ axis: 'y' })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ axis: 'x' })
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   // Find the product by ID across all categories
@@ -36,30 +36,32 @@ const ProductDetail = () => {
   if (!product) return <div>Product not found</div>
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 p-8">
-      {/* Left Sidebar Thumbnails */}
-      <div className="flex">
-        <div className="w-20 overflow-hidden mr-4">
-          <div ref={emblaRef} className="embla">
-            <div className="embla__container flex flex-col gap-2">
-              {product.images.map((image, index) => (
-                <div
-                  key={index}
-                  className={`cursor-pointer ${
-                    selectedIndex === index
-                      ? 'border-2 border-[#548cb8] rounded-md'
-                      : ''
-                  }`}
-                  onClick={() => handleThumbnailClick(index)}
-                >
-                  <img
-                    src={image}
-                    alt={`${product.name} - ${index}`}
-                    className="w-full h-20 object-cover rounded"
-                  />
-                </div>
-              ))}
-            </div>
+    <div className="flex flex-col lg:flex-row gap-8 p-2">
+      {/* Image Section */}
+      <div className="flex flex-col-reverse lg:flex-row lg:gap-4">
+        {/* Thumbnails */}
+        <div className="mt-4 lg:mt-0 lg:w-20">
+          <div
+            ref={emblaRef}
+            className="embla flex gap-2 overflow-x-auto lg:overflow-hidden lg:flex-col"
+          >
+            {product.images.map((image, index) => (
+              <div
+                key={index}
+                className={`cursor-pointer ${
+                  selectedIndex === index
+                    ? 'border-2 border-[#548cb8] rounded-md'
+                    : ''
+                }`}
+                onClick={() => handleThumbnailClick(index)}
+              >
+                <img
+                  src={image}
+                  alt={`${product.name} - ${index}`}
+                  className="w-20 h-20 object-cover rounded"
+                />
+              </div>
+            ))}
           </div>
         </div>
 

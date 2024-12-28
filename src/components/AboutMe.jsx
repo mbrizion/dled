@@ -34,7 +34,7 @@ const AboutMe = () => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center p-6 w-full">
+    <div className="flex flex-col items-center md:p-6 p-4 w-full">
       {isMatch && (
         <div
           className="bg-black bg-opacity-85 absolute w-screen h-screen top-0 z-50 flex items-center justify-center"
@@ -44,25 +44,25 @@ const AboutMe = () => {
         </div>
       )}
       <div className="max-w-4xl w-full overflow-hidden">
-        <div className="relative py-8 text-center">
+        <div className="relative text-center">
           <h1 className="text-lg md:text-4xl font-medium text-[#548cb8] font-aboreto w-full text-center relative -mb-1 md:-mb-4 z-10 uppercase">
             {t('aboutMeTitle')}
           </h1>
         </div>
-        <div className="flex flex-col-reverse md:flex-row">
+        <div className="flex flex-col-reverse md:flex-row md:mt-8">
           {/* Left Section */}
-          <div className="flex-1 p-6 space-y-4">
-            <p className="text-gray-600 text-lg leading-relaxed">
+          <div className="flex-1 md:p-6 space-y-4">
+            <p className="text-gray-600 text-lg leading-relaxed text-center md:text-left">
               {t('aboutMeDescription')}
             </p>
           </div>
 
           {/* Right Section */}
-          <div className="flex-1 border-b md:border-b-0 md:border-l p-6 flex flex-col items-center relative">
+          <div className="flex-1 border-b md:border-b-0 md:border-l md:p-6 p-2 flex flex-col items-center relative">
             <img
               src={rima}
               alt="rima"
-              className="w-fit h-full  object-contain"
+              className="md:w-fit md:h-full object-contain h-72 w-72"
             />
           </div>
         </div>

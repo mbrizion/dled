@@ -30,7 +30,7 @@ const Pottery = () => {
       <div className="w-fit object-contain cursor-pointer mx-auto">
         <ScrollCarouselWithThumbnails images={randomizedPottery} />
       </div>
-      <h1 className="text-3xl font-medium w-full">{t('process')}</h1>
+      <h1 className="mt-6 text-3xl font-medium w-full">{t('process')}</h1>
       <div className="flex flex-col flex-wrap gap-6 mt-10 w-full items-center">
         <div className="flex flex-col items-center mt-10 w-full">
           <Steps steps={steps} />
