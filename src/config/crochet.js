@@ -14,6 +14,10 @@ import plant1 from '../assets/img/creations/plant/plant1.jpg'
 import plant2 from '../assets/img/creations/plant/plant2.jpg'
 import plant3 from '../assets/img/creations/plant/plant3.jpg'
 
+import tomato from '../assets/img/creations/tomato/tomato.jpg'
+import tomato1 from '../assets/img/creations/tomato/tomato1.jpg'
+import tomato2 from '../assets/img/creations/tomato/tomato2.jpg'
+
 // Add all imports to the array
 const crochet = [
   garlic,
@@ -26,6 +30,9 @@ const crochet = [
   senor1,
   kirby,
   plant3,
+  tomato,
+  tomato1,
+  tomato2,
 ]
 
 // Randomize the array
