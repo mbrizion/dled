@@ -12,9 +12,10 @@ const Shop = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
 
   const types = Object.keys(productsByType)
-  const categories = selectedType
-    ? Object.keys(productsByType[selectedType])
-    : []
+  const categories =
+    selectedType && productsByType[selectedType]
+      ? Object.keys(productsByType[selectedType])
+      : []
 
   // Get products to display based on the current state
   const productsToDisplay = useMemo(() => {
@@ -53,7 +54,7 @@ const Shop = () => {
       </div>
 
       {/* Category Filter */}
-      {selectedType && (
+      {selectedType === 'pottery' && categories.length > 0 && (
         <div className="flex space-x-4 mb-8">
           {categories.map((category) => (
             <button
