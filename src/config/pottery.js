@@ -28,6 +28,11 @@ import black_bowl1 from '../assets/img/creations/black_bowl/black_bowl1.jpg'
 import black_cup from '../assets/img/creations/black_cup/black_cup.jpg'
 import black_cup1 from '../assets/img/creations/black_cup/black_cup1.jpg'
 
+// Flower pot
+import flower_pot from '../assets/img/creations/flower_pot/flower_pot.jpg'
+import flower_pot1 from '../assets/img/creations/flower_pot/flower_pot1.jpg'
+import flower_pot2 from '../assets/img/creations/flower_pot/flower_pot2.jpg'
+
 export const pottery = [
   bowl2,
   bowl6,
@@ -35,6 +40,7 @@ export const pottery = [
   mug3,
   bowl7,
   mug1,
+  flower_pot1,
   bowl5,
   leaf_bowl,
   blue_bowl,
@@ -45,6 +51,8 @@ export const pottery = [
   black_cup1,
   cup,
   cup1,
+  flower_pot,
+  flower_pot2,
 ]
 
 // Randomize the array

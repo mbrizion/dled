@@ -28,73 +28,107 @@ import black_bowl1 from '../assets/img/creations/black_bowl/black_bowl1.jpg'
 import black_cup from '../assets/img/creations/black_cup/black_cup.jpg'
 import black_cup1 from '../assets/img/creations/black_cup/black_cup1.jpg'
 
+// Tomato
+import tomato from '../assets/img/creations/tomato/tomato.jpg'
+import tomato1 from '../assets/img/creations/tomato/tomato1.jpg'
+import tomato2 from '../assets/img/creations/tomato/tomato2.jpg'
+
+// Plant
+import plant from '../assets/img/creations/plant/plant1.jpg'
+import plant2 from '../assets/img/creations/plant/plant2.jpg'
+import plant3 from '../assets/img/creations/plant/plant3.jpg'
+
 const soldOutColor = 'text-white'
 
 export const productsByType = {
-  bowls: [
-    {
-      id: 1,
-      name: 'Bowl Set',
-      images: [bowl2, bowl5, bowl6, bowl7],
-      description:
-        'A beautifully crafted bowl set, perfect for dining and decoration.',
-      price: '€20,00',
-      link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
-    },
-    {
-      id: 5,
-      name: 'Blue Bowl',
-      images: [blue_bowl, blue_bowl1],
-      description: 'Elegant blue bowls with a calming, oceanic finish.',
-      price: '€22,00',
-      link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
-    },
-    {
-      id: 6,
-      name: 'Black Bowl Set',
-      images: [black_bowl, black_bowl1],
-      description:
-        'A sophisticated black bowl set, adding a modern touch to your table.',
-      price: '€25,00',
-      link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
-    },
-    {
-      id: 3,
-      name: 'Leaf Bowl',
-      images: [leaf_bowl, leaf_bowl1],
-      description: 'Nature-inspired leaf bowl, ideal for serving or display.',
-      price: '€18,00',
-      link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
-      status: { label: 'Sold Out', color: soldOutColor },
-    },
-  ],
-  mugs: [
-    {
-      id: 2,
-      name: 'Mug Set',
-      images: [mug1, mug3],
-      description:
-        'A set of handcrafted ceramic mugs for coffee or tea lovers.',
-      price: '€15,00',
-      link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
-    },
-  ],
-  cups: [
-    {
-      id: 4,
-      name: 'Cup Set',
-      images: [cup, cup1],
-      description: 'Minimalist cup set with a clean, modern design.',
-      price: '€12,00',
-      link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
-    },
-    {
-      id: 7,
-      name: 'Black Cup Set',
-      images: [black_cup, black_cup1],
-      description: 'Stylish black cup set for a contemporary aesthetic.',
-      price: '€14,00',
-      link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
-    },
-  ],
+  pottery: {
+    bowls: [
+      {
+        id: 1,
+        name: 'Bowl Set',
+        images: [bowl2, bowl5, bowl6, bowl7],
+        description:
+          'A beautifully crafted bowl set, perfect for dining and decoration.',
+        price: '€20,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+      {
+        id: 5,
+        name: 'Blue Bowl',
+        images: [blue_bowl, blue_bowl1],
+        description: 'Elegant blue bowls with a calming, oceanic finish.',
+        price: '€22,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+      {
+        id: 6,
+        name: 'Black Bowl Set',
+        images: [black_bowl, black_bowl1],
+        description:
+          'A sophisticated black bowl set, adding a modern touch to your table.',
+        price: '€25,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+      {
+        id: 3,
+        name: 'Leaf Bowl',
+        images: [leaf_bowl, leaf_bowl1],
+        description: 'Nature-inspired leaf bowl, ideal for serving or display.',
+        price: '€18,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+        status: { label: 'Sold Out', color: soldOutColor },
+      },
+    ],
+    mugs: [
+      {
+        id: 2,
+        name: 'Mug Set',
+        images: [mug1, mug3],
+        description:
+          'A set of handcrafted ceramic mugs for coffee or tea lovers.',
+        price: '€15,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+    ],
+    cups: [
+      {
+        id: 4,
+        name: 'Cup Set',
+        images: [cup, cup1],
+        description: 'Minimalist cup set with a clean, modern design.',
+        price: '€12,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+      {
+        id: 7,
+        name: 'Black Cup Set',
+        images: [black_cup, black_cup1],
+        description: 'Stylish black cup set for a contemporary aesthetic.',
+        price: '€14,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+    ],
+  },
+  crochet: {
+    tomato: [
+      {
+        id: 10,
+        name: 'TOMATOOOOOOOOOOOO',
+        images: [tomato, tomato1, tomato2],
+        description: 'A warm and cozy tomato hat.',
+        price: '€35,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+    ],
+    plant: [
+      {
+        id: 9,
+        name: 'Plant',
+        images: [plant, plant2, plant3],
+        description: 'Plant chilling on a ladder.',
+        price: '€35,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+    ],
+  },
 }
