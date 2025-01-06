@@ -10,13 +10,16 @@ const ProductDetail = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: 'x' })
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-  // Find the product by ID across all categories
   useEffect(() => {
     let foundProduct = null
+
     Object.values(productsByType).forEach((category) => {
-      const match = category.find((item) => item.id === parseInt(id))
-      if (match) foundProduct = match
+      Object.values(category).forEach((subCategory) => {
+        const match = subCategory.find((item) => item.id === parseInt(id))
+        if (match) foundProduct = match
+      })
     })
+
     setProduct(foundProduct)
   }, [id])
 

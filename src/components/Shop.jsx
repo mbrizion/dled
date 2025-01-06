@@ -1,11 +1,10 @@
 import React, { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { productsByType } from '../config/products'
-import { HiOutlineXMark } from 'react-icons/hi2'
 
 const Shop = () => {
   const navigate = useNavigate()
-  const defaultTypes = ['crochet', 'pottery'] // Default types to show when type is null
+  const defaultTypes = ['crochet', 'pottery']
 
   const [selectedType, setSelectedType] = useState(null)
   const [selectedCategory, setSelectedCategory] = useState(null)
