@@ -38,6 +38,17 @@ import plant from '../assets/img/creations/plant/plant1.jpg'
 import plant2 from '../assets/img/creations/plant/plant2.jpg'
 import plant3 from '../assets/img/creations/plant/plant3.jpg'
 
+// Coasters
+import coaster1 from '../assets/img/creations/coasters/coaster1.jpg'
+import coaster3 from '../assets/img/creations/coasters/coaster2.jpg'
+import coaster4 from '../assets/img/creations/coasters/coaster3.jpg'
+import coaster5 from '../assets/img/creations/coasters/coaster4.jpg'
+import coaster8 from '../assets/img/creations/coasters/coaster8.jpg'
+
+import white_flower1 from '../assets/img/creations/white_flower/white_flower1.jpg'
+import white_flower2 from '../assets/img/creations/white_flower/white_flower2.jpg'
+import white_flower3 from '../assets/img/creations/white_flower/white_flower3.jpg'
+
 const soldOutColor = 'text-white'
 
 export const productsByType = {
@@ -53,7 +64,7 @@ export const productsByType = {
         link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
       },
       {
-        id: 5,
+        id: 2,
         name: 'Blue Bowl',
         images: [blue_bowl, blue_bowl1],
         description: 'Elegant blue bowls with a calming, oceanic finish.',
@@ -61,7 +72,7 @@ export const productsByType = {
         link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
       },
       {
-        id: 6,
+        id: 3,
         name: 'Black Bowl Set',
         images: [black_bowl, black_bowl1],
         description:
@@ -70,7 +81,7 @@ export const productsByType = {
         link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
       },
       {
-        id: 3,
+        id: 4,
         name: 'Leaf Bowl',
         images: [leaf_bowl, leaf_bowl1],
         description: 'Nature-inspired leaf bowl, ideal for serving or display.',
@@ -81,7 +92,7 @@ export const productsByType = {
     ],
     mugs: [
       {
-        id: 2,
+        id: 5,
         name: 'Mug Set',
         images: [mug1, mug3],
         description:
@@ -92,7 +103,7 @@ export const productsByType = {
     ],
     cups: [
       {
-        id: 4,
+        id: 6,
         name: 'Cup Set',
         images: [cup, cup1],
         description: 'Minimalist cup set with a clean, modern design.',
@@ -112,7 +123,7 @@ export const productsByType = {
   crochet: {
     tomato: [
       {
-        id: 10,
+        id: 8,
         name: 'TOMATOOOOOOOOOOOO',
         images: [tomato, tomato1, tomato2],
         description: 'A warm and cozy tomato hat.',
@@ -126,6 +137,26 @@ export const productsByType = {
         name: 'Plant',
         images: [plant, plant2, plant3],
         description: 'Plant chilling on a ladder.',
+        price: '€35,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+    ],
+    coasters: [
+      {
+        id: 10,
+        name: 'Coasters',
+        images: [coaster1, coaster3, coaster4, coaster5, coaster8],
+        description: "Coasters to warm cup's butt",
+        price: '€35,00',
+        link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
+      },
+    ],
+    white_flower: [
+      {
+        id: 11,
+        name: 'White flower',
+        images: [white_flower1, white_flower2, white_flower3],
+        description: 'Flower power, bag banger',
         price: '€35,00',
         link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',
       },

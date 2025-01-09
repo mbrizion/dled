@@ -18,6 +18,14 @@ import tomato from '../assets/img/creations/tomato/tomato.jpg'
 import tomato1 from '../assets/img/creations/tomato/tomato1.jpg'
 import tomato2 from '../assets/img/creations/tomato/tomato2.jpg'
 
+import coaster1 from '../assets/img/creations/coasters/coaster2.jpg'
+import coaster2 from '../assets/img/creations/coasters/coaster3.jpg'
+import coaster3 from '../assets/img/creations/coasters/coaster4.jpg'
+
+import white_flower1 from '../assets/img/creations/white_flower/white_flower1.jpg'
+import white_flower2 from '../assets/img/creations/white_flower/white_flower2.jpg'
+import white_flower3 from '../assets/img/creations/white_flower/white_flower3.jpg'
+
 // Add all imports to the array
 const crochet = [
   garlic,
@@ -33,6 +41,12 @@ const crochet = [
   tomato,
   tomato1,
   tomato2,
+  coaster1,
+  coaster2,
+  coaster3,
+  white_flower1,
+  white_flower2,
+  white_flower3,
 ]
 
 // Randomize the array
