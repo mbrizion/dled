@@ -80,12 +80,14 @@ const Shop = () => {
         {productsToDisplay.map((product) => (
           <div
             key={product.id}
-            onClick={() =>
+            onClick={() => navigate(`/dled/shop/${product.id}`)}
+            onMouseEnter={() =>
               product.status?.label !== 'Sold Out' &&
-              navigate(`/dled/shop/${product.id}`)
+              setHoveredProduct(product.id)
             }
-            onMouseEnter={() => setHoveredProduct(product.id)}
-            onMouseLeave={() => setHoveredProduct(null)}
+            onMouseLeave={() =>
+              product.status?.label !== 'Sold Out' && setHoveredProduct(null)
+            }
             className="cursor-pointer relative flex flex-col items-center"
           >
             {product.status?.label === 'Sold Out' && (

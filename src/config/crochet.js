@@ -25,6 +25,7 @@ import coaster3 from '../assets/img/creations/coasters/coaster4.jpg'
 import white_flower1 from '../assets/img/creations/white_flower/white_flower1.jpg'
 import white_flower2 from '../assets/img/creations/white_flower/white_flower2.jpg'
 import white_flower3 from '../assets/img/creations/white_flower/white_flower3.jpg'
+import white_flower4 from '../assets/img/creations/white_flower/white_flower4.jpg'
 
 // Add all imports to the array
 const crochet = [
@@ -47,6 +48,7 @@ const crochet = [
   white_flower1,
   white_flower2,
   white_flower3,
+  white_flower4,
 ]
 
 // Randomize the array

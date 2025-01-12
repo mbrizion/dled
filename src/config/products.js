@@ -48,6 +48,7 @@ import coaster8 from '../assets/img/creations/coasters/coaster8.jpg'
 import white_flower1 from '../assets/img/creations/white_flower/white_flower1.jpg'
 import white_flower2 from '../assets/img/creations/white_flower/white_flower2.jpg'
 import white_flower3 from '../assets/img/creations/white_flower/white_flower3.jpg'
+import white_flower4 from '../assets/img/creations/white_flower/white_flower4.jpg'
 
 const soldOutColor = 'text-white'
 
@@ -155,7 +156,7 @@ export const productsByType = {
       {
         id: 11,
         name: 'White flower',
-        images: [white_flower1, white_flower2, white_flower3],
+        images: [white_flower1, white_flower2, white_flower3, white_flower4],
         description: 'Flower power, bag banger',
         price: '€35,00',
         link: 'https://www.ebay.fr/itm/176200208891?mkcid=16&mkevt=1&mkrid=709-127639-2357-0&ssspo=zDEAZQ7KTSS&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY',

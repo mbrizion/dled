@@ -93,14 +93,20 @@ const ProductDetail = () => {
         <div className="flex-1">
           <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
           <p className="text-2xl font-semibold mb-4">{product.price}</p>
-          <a
-            href={product.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#548cb8] text-white cursor-pointer px-6 py-3 mb-6 inline-block hover:bg-[#37566e]"
-          >
-            BUY ON EBAY
-          </a>
+          {product.status?.label !== 'Sold Out' ? (
+            <a
+              href={product.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#548cb8] text-white cursor-pointer px-6 py-3 mb-6 inline-block hover:bg-[#37566e]"
+            >
+              BUY ON EBAY
+            </a>
+          ) : (
+            <button className="bg-[#548cb8] text-white cursor-not-allowed px-6 py-3 mb-6 inline-block hover:bg-[#37566e]">
+              {product.status?.label}
+            </button>
+          )}
           <p className="text-gray-700 leading-relaxed">{product.description}</p>
           <p className="mt-4 text-gray-600">
             <strong>Materials:</strong> Porcelain <br />
