@@ -10,8 +10,11 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null)
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: 'x' })
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const [zoomStyle, setZoomStyle] = useState({})
+  const [isZoomVisible, setIsZoomVisible] = useState(false)
 
   const navigate = useNavigate()
+
   useEffect(() => {
     let foundProduct = null
 
@@ -25,7 +28,6 @@ const ProductDetail = () => {
     setProduct(foundProduct)
   }, [id])
 
-  // Handle thumbnail click
   const handleThumbnailClick = (index) => {
     setSelectedIndex(index)
     if (emblaApi) emblaApi.scrollTo(index)
@@ -38,10 +40,22 @@ const ProductDetail = () => {
     })
   }, [emblaApi])
 
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect()
+    const x = ((e.clientX - left) / width) * 100
+    const y = ((e.clientY - top) / height) * 100
+
+    setZoomStyle({
+      backgroundImage: `url(${product.images[selectedIndex]})`,
+      backgroundPosition: `${x}% ${y}%`,
+      backgroundSize: '250%',
+    })
+  }
+
   if (!product) return <div>Product not found</div>
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 p-2 max-w-full overflow-hidden">
+    <div className="flex flex-col lg:flex-row gap-8 p-2 max-w-full">
       <div
         className="flex gap-2 cursor-pointer w-fit h-fit"
         onClick={() => {
@@ -51,9 +65,16 @@ const ProductDetail = () => {
         <HiOutlineArrowLeft className="text-2xl" />
         <span>Back to shop</span>
       </div>
-      <div className="flex flex-col lg:flex-row gap-8 p-2 max-w-full overflow-hidden md:mt-8">
-        {/* Image Section */}
-        <div className="flex flex-col-reverse lg:flex-row lg:gap-4">
+      <div className="flex flex-col lg:flex-row gap-8 p-2 max-w-full md:mt-8">
+        <div className="flex flex-col-reverse lg:flex-row lg:gap-4 relative">
+          {/* Zoomed Section */}
+          {isZoomVisible && (
+            <div
+              className="absolute -right-[500px] top-0 w-[500px] h-[500px] border-2 border-gray-300 rounded-lg bg-no-repeat bg-cover"
+              style={zoomStyle}
+            ></div>
+          )}
+
           {/* Thumbnails */}
           <div className="mt-4 lg:mt-0 lg:w-20 max-h-[500px] overflow-auto">
             <div
@@ -81,7 +102,12 @@ const ProductDetail = () => {
           </div>
 
           {/* Main Image */}
-          <div className="flex-1 flex items-center justify-center">
+          <div
+            className="flex-1 flex items-center justify-center relative"
+            onMouseEnter={() => setIsZoomVisible(true)}
+            onMouseLeave={() => setIsZoomVisible(false)}
+            onMouseMove={handleMouseMove}
+          >
             <img
               src={product.images[selectedIndex]}
               alt={product.name}
