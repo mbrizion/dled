@@ -80,7 +80,7 @@ const Shop = () => {
         {productsToDisplay.map((product) => (
           <div
             key={product.id}
-            onClick={() => navigate(`/dled/shop/${product.id}`)}
+            onClick={() => navigate(`/shop/${product.id}`)}
             onMouseEnter={() =>
               product.status?.label !== 'Sold Out' &&
               setHoveredProduct(product.id)

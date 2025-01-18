@@ -51,9 +51,7 @@ function App() {
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              onClick={() =>
-                navigate(index === 0 ? '/dled/pottery/' : '/dled/crochet/')
-              }
+              onClick={() => navigate(index === 0 ? '/pottery/' : '/crochet/')}
               className={`w-full max-w-80 md:max-w-[calc(100vh-12rem)] relative group transition-all duration-200 cursor-pointer md:mb-0 mb-2 ${
                 hoveredIndex === index
                   ? 'scale-105 opacity-100 z-10'

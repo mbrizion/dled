@@ -37,7 +37,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
         />
       ),
       label: t('shop'),
-      route: '/dled/shop',
+      route: '/shop',
       classNames: 'hidden 2xl:block',
     },
     {
@@ -47,7 +47,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
         </div>
       ),
       label: t('pottery'),
-      route: '/dled/pottery/',
+      route: '/pottery/',
     },
     {
       icon: (
@@ -56,7 +56,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
         </div>
       ),
       label: t('crochet'),
-      route: '/dled/crochet/',
+      route: '/crochet/',
     },
     {
       icon: (
@@ -66,7 +66,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
         />
       ),
       label: t('contact'),
-      route: '/dled/contact/',
+      route: '/contact/',
     },
     {
       icon: (
@@ -76,7 +76,7 @@ const Header = ({ classNames, logoClassnames, isTransparent }) => {
         />
       ),
       label: t('aboutMe'),
-      route: '/dled/aboutme/',
+      route: '/aboutme/',
       classNames: 'italic font-medium',
     },
   ]

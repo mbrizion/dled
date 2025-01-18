@@ -33,19 +33,19 @@ const Layout = () => (
 // Define Routes
 const router = createBrowserRouter([
   {
-    path: '/dled/',
+    path: '/',
     element: <App />,
   },
   {
-    path: '/dled',
-    element: <Layout />, // Shared Layout with Header
+    path: '/',
+    element: <Layout />,
     children: [
       {
         path: 'shop',
         element: <Shop />,
       },
       {
-        path: 'shop/:id', // Dynamic Route for Product Details
+        path: 'shop/:id',
         element: <ProductDetail />,
       },
       {
@@ -68,8 +68,9 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: <Navigate to="/dled/" replace />,
+    element: <Navigate to="/" replace />,
   },
 ])
+
 
 export default router

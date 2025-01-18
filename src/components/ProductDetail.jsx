@@ -59,7 +59,7 @@ const ProductDetail = () => {
       <div
         className="flex gap-2 cursor-pointer w-fit h-fit"
         onClick={() => {
-          navigate('/dled/shop/')
+          navigate('/shop/')
         }}
       >
         <HiOutlineArrowLeft className="text-2xl" />
